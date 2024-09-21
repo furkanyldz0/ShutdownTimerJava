@@ -52,6 +52,13 @@ public class ShutdownTimer extends JFrame implements ActionListener{
         (new JTextFieldLimit(2));
 		secondField.setText(secondsString);
 		
+		CustomFocusListener listener1 = new CustomFocusListener();
+		CustomFocusListener listener2 = new CustomFocusListener();
+		CustomFocusListener listener3 = new CustomFocusListener();
+		listener1.setFocusListener(hourField);
+		listener2.setFocusListener(minuteField);
+		listener3.setFocusListener(secondField);
+		
 		colon1 = new JLabel(":");
 		colon2 = new JLabel(":");
 		
